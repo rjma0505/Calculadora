@@ -32,7 +32,15 @@ if __name__ == "__main__":
         try:
             print('Calculadora')
             print('----------------------------------\n')
+            num1 = float(input("Digite o primeiro número: "))
+            operador = input("Digite o operador (+, -, *, /, **): ")
+            num2 = float(input("Digite o segundo número: "))
 
+            resultado = calculadora(num1, num2, operador)
+            if str(resultado) == 'nan':
+                print("Operador inválido!")
+            else:
+                print(f"\nResultado: {num1} {operador} {num2} = {resultado}")
 
         except ValueError:
             print('Dados inválidos! -> Tente novamente!')
@@ -41,5 +49,7 @@ if __name__ == "__main__":
         except ZeroDivisionError:
             print('Impossível dividir por zero! -> Tente novamente!')
             time.sleep(2)
-
+        continuar = input("\nDeseja continuar? (s/n): ").strip().lower()
+        if continuar != 's':
+            break
     print('\nVolte sempre!\n')
