@@ -49,10 +49,11 @@ if __name__ == "__main__":
         except ValueError:
             print('Dados inválidos! -> Tente novamente!')
             time.sleep(2)
-
+            continue
         except ZeroDivisionError:
             print('Impossível dividir por zero! -> Tente novamente!')
             time.sleep(2)
+            continue
         continuar = input("\nDeseja continuar? (s/n): ").strip().lower()
         if continuar != 's':
             break
