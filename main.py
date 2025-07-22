@@ -1,3 +1,7 @@
+# Ricardo Azevedo
+# Calculadora de operações básicas, retorna NaN se o operador não for válido
+
+
 import os
 import time
 
